@@ -1,6 +1,6 @@
-<h1>Proyecto Sistema Stock</h1>
+<h1>PROYECTO SISTEMA STOCK</h1>
 
-<h2>INSTRUCCIONES PARA INSTALAR EN LOCAL</h2>
+<h2>Instrucciones para instalar proyecto en el local</h2>
 <ol>
     <li>Crear carpeta Madre, donde guardaras tu ambiente virtual y tu proyecto Django</li>
     <li>Crear ambiente virtual en esa carpeta para este proyecto</li>
@@ -13,4 +13,5 @@
     <li>Crear SUPERUSER en la Termminal: python manage.py createsuperuser</li>
     <li>Acceder con user y password via: 127.0.0.1:8000/admin</li>
 </ol>
+
 
