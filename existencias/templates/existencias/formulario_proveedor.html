@@ -1,0 +1,25 @@
+{% extends "existencias/base.html" %}
+{% block subtitulo%}Crear Proveedor{% endblock subtitulo %}
+{% block estilos %}
+
+.formulario{
+  text-align: right;
+}
+
+{% endblock estilos %}
+
+
+{% block contenido %}
+<h1 >Alta de Proveedor</h1>
+<br>
+<div class="input-group mb-3" style="box-sizing: border-box;">
+  <form action="{% url 'crear_proveedor' %}" method="post" class="formulario">
+    {% csrf_token %}
+    {{ formulario.as_p }}
+    <input type="submit" value="Enviar" class="btn btn-primary mb-3"/>
+  </form>
+</div>
+
+
+
+{% endblock contenido %}

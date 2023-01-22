@@ -1,0 +1,42 @@
+
+{% extends "existencias/base.html"%}
+{% block subtitulo%}Clientes {% endblock subtitulo %}
+{% block estilos %}
+
+
+
+{% endblock estilos%}
+
+
+
+
+
+{% block contenido %}
+
+
+
+<h1>Detalle de Clientes</h1>
+<table class="table table-dark table-striped">
+    <thead>
+      <tr>
+        <th scope="col">Nombre</th>
+        <th scope="col">Dirección</th>
+        <th scope="col">Teléfono</th>
+        <th scope="col">Email</th>
+      </tr>
+    </thead>
+    <tbody>
+        {% for cliente in clientes %}
+        <tr>
+            <td>{{cliente.nombre}}</td>
+            <td>{{ cliente.direccion}}</td>
+            <td>{{cliente.telefono}}</td>
+            <td>{{cliente.email}}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+
+<a class="btn btn-primary" href="{% url 'crear_cliente' %}">Añadir cliente</a>
+{% endblock contenido%}
+

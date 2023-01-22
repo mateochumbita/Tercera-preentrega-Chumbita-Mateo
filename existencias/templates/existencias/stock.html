@@ -1,0 +1,41 @@
+{% extends "existencias/base.html"%}
+{% block subtitulo%}Stock {% endblock subtitulo %}
+
+
+
+{% block estilos %}
+
+
+{% endblock estilos%}
+
+{% block colores %}
+.navbar-brand:visited{
+  color: blue;
+
+}
+
+
+{% endblock colores%}
+
+{% block contenido%}
+<h1>Detalle de Stock</h1>
+
+<table class="table table-dark table-striped">
+    <thead>
+      <tr>
+        <th scope="col">Producto</th>
+        <th scope="col">Cantidad</th>
+      </tr>
+    </thead>
+    <tbody>
+        {% for stock in stocks %}
+        <tr>
+            <td>{{ stock.producto}}</td>
+            <td>{{stock.cantidad}}</td>   
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+
+<a class="btn btn-primary" href="{% url 'crear_stock' %}">Actualizar Stock</a>
+{% endblock contenido%}

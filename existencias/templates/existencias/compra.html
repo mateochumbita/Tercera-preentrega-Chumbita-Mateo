@@ -1,0 +1,38 @@
+{% extends "existencias/base.html"%}
+{% block subtitulo%}Compras {% endblock subtitulo %}
+
+
+
+{% block estilos %}
+
+
+{% endblock estilos%}
+
+{% block contenido %}
+<h1>Detalle de Compras</h1>
+
+<table class="table table-dark table-striped">
+    <thead>
+      <tr>
+        <th scope="col">Proveedor</th>
+        <th scope="col">Producto</th>
+        <th scope="col">Cantidad</th>
+        <th scope="col">Total</th>
+      </tr>
+    </thead>
+    <tbody>
+        {% for compra in compras %}
+        <tr>
+            <td>{{compra.proveedor}}</td>
+            <td>{{ compra.producto}}</td>
+            <td>{{compra.cantidad}}</td>
+            <td>{{compra.monto}}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+
+<a class="btn btn-primary" href="{% url 'crear_compra' %}">Añadir Compra</a>
+
+
+{% endblock contenido%}
